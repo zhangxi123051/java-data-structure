@@ -1,6 +1,6 @@
 package com.tencent.plan.string;
 
-public class BFBK {
+public class BFRK {
 
     public static int bF(String a,String b) {
         int m=a.length(),n=b.length(),k;

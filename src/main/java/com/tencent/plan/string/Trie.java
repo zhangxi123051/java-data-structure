@@ -34,6 +34,34 @@ public class Trie {
         else return true; // 找到pattern
     }
 
+    // 在Trie树中查找一个字符串
+    public boolean findPrefix(char[] pattern) {
+        TrieNode p = root;
+        for (int i = 0; i < pattern.length; ++i) {
+            int index = pattern[i] - 'a';
+            if (p.children[index] == null) {
+                return false; // 不存在pattern
+            }
+            p = p.children[index];
+        }
+        return true; // 找到pattern
+    }
+
+    //计算最长公共子串
+    public String getMaxPrefix() {
+        TrieNode p = root;
+//        for (int i = 0; i < pattern.length; ++i) {
+//            int index = pattern[i] - 'a';
+//            if (p.children[index] == null) {
+//                return false; // 不存在pattern
+//            }
+//            p = p.children[index];
+//        }
+        return ""; // 找到pattern
+    }
+
+
+
     public class TrieNode {
         public char data;
         public TrieNode[] children = new TrieNode[26];
@@ -45,8 +73,16 @@ public class Trie {
 
     public  static void main(String[] args){
         String[] array = new  String[]{"hello","hi","hero"};
+
+        Trie trie = new Trie();
+
         for(String s:array){
-            System.out.println(s);
+//            System.out.println(s);
+            trie.insert(s.toCharArray());
         }
+
+        System.out.println(trie.findPrefix("hem".toCharArray()));
+
+
     }
 }

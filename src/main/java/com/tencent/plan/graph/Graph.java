@@ -70,6 +70,7 @@ public class Graph {
 
     public static void main(String[] args) {
         Graph graph = new Graph(8);
+
         graph.addEdge(0,1);
         graph.addEdge(0,3);
         graph.addEdge(1,2);
@@ -82,14 +83,14 @@ public class Graph {
 
         //广度优先
         System.out.println("-----广度优先-----\n");
-        graph.bfs(0,6);
-        System.out.println("-----广度优先-----\n");
+        //graph.bfs(0,6);
+        System.out.println("\n-----广度优先-----\n");
 
 
         // 深度优先
         System.out.println("-----深度优先-----\n");
         graph.dfs(0, 6);
-        System.out.println("-----深度优先-----\n");
+        System.out.println("\n-----深度优先-----\n");
 
     }
 

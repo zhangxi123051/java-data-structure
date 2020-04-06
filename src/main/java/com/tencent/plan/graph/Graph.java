@@ -79,10 +79,17 @@ public class Graph {
         graph.addEdge(4,6);
         graph.addEdge(5,7);
         graph.addEdge(6,7);
-//        graph.bfs(0,6);
+
+        //广度优先
+        System.out.println("-----广度优先-----\n");
+        graph.bfs(0,6);
+        System.out.println("-----广度优先-----\n");
+
 
         // 深度优先
+        System.out.println("-----深度优先-----\n");
         graph.dfs(0, 6);
+        System.out.println("-----深度优先-----\n");
 
     }
 

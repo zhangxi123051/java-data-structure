@@ -1,13 +1,6 @@
 package com.tencent.plan.dynamicplan;
 
 public class LeastCoin {
-
-    public static void main(String[] args) {
-        int[] coins = {1, 3, 5};
-        System.out.println(leastCoin(coins, 3, 9));
-
-    }
-
     public static int leastCoin(int[] coins, int num, int limit) {
         int[] states = new int[limit + 1];// 要到达9，所以取状态在[0,9]之间
 
@@ -28,5 +21,12 @@ public class LeastCoin {
         }
 
         return states[limit];
+    }
+
+
+    public static void main(String[] args) {
+        int[] coins = {1,3,5,4,6,8};
+        System.out.println(leastCoin(coins, coins.length, 12));
+
     }
 }

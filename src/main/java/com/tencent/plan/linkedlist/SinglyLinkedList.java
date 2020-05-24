@@ -6,7 +6,29 @@ package com.tencent.plan.linkedlist;
  *
  * Author：Zheng
  */
+
+
+
 public class SinglyLinkedList {
+
+    public static class Node {
+        private int data;
+        private Node next;
+
+        public Node(int data, Node next) {
+            this.data = data;
+            this.next = next;
+        }
+
+        public int getData() {
+            return data;
+        }
+    }
+
+    public static Node createNode(int value) {
+        return new Node(value, null);
+    }
+
 
     private Node head = null;
 
@@ -287,24 +309,9 @@ public class SinglyLinkedList {
 
     }
     
-    public static Node createNode(int value) {
-        return new Node(value, null);
-    }
 
-    public static class Node {
-        private int data;
-        private Node next;
 
-        public Node(int data, Node next) {
-            this.data = data;
-            this.next = next;
-        }
 
-        public int getData() {
-            return data;
-        }
-    }
-    
     public static void main(String[]args){
 
         SinglyLinkedList link = new SinglyLinkedList(); 

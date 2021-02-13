@@ -39,7 +39,7 @@ public class Solution78 {
 
     public static void main(String[] args) {
         Solution solution = new Solution78().new Solution();
-        int[] nums = new int[]{1,3,5,7};
+        int[] nums = new int[]{1,5,3,7};
         System.out.println("size="+solution.subsets(nums).size());
         System.out.println(solution.subsets(nums));
 

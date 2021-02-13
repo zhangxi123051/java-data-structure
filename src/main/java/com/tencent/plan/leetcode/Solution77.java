@@ -45,7 +45,7 @@ public class Solution77 {
     }
 
     public static void main(String[] args){
-        List<List<Integer>> result=((new Solution77()).new Solution()).combine(4,3);
+        List<List<Integer>> result=((new Solution77()).new Solution()).combine(4,2);
 
         System.out.println(result.toString());
 //        for(List<Integer> item:result){

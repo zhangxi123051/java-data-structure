@@ -66,5 +66,49 @@ public class Solution78 {
             return result;
 
         }
+
+
+        //回溯法
+        public List<List<Integer>> backStrackSubsets(int[] nums) {
+            List<List<Integer>> result  = new ArrayList<>();
+            result.add(new ArrayList<Integer>());
+            for(int i: nums){
+                List<List<Integer>> subsets = new ArrayList<>();
+                for(List<Integer> item:result){
+                    List<Integer> temp = new ArrayList<>(item);
+                    temp.add(i);
+                    subsets.add(temp);
+                }
+                //将subnets中的list加入到result中
+                for(List<Integer> item:subsets){
+                    result.add(item);
+                }
+            }
+
+            return result;
+
+        }
+
+
+        //深度遍历
+        public List<List<Integer>> dfsSubsets(int[] nums) {
+            List<List<Integer>> result  = new ArrayList<>();
+            result.add(new ArrayList<Integer>());
+            for(int i: nums){
+                List<List<Integer>> subsets = new ArrayList<>();
+                for(List<Integer> item:result){
+                    List<Integer> temp = new ArrayList<>(item);
+                    temp.add(i);
+                    subsets.add(temp);
+                }
+                //将subnets中的list加入到result中
+                for(List<Integer> item:subsets){
+                    result.add(item);
+                }
+            }
+
+            return result;
+
+        }
     }
 }

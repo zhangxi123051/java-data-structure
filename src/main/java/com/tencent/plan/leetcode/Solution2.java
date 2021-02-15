@@ -102,7 +102,7 @@ public class Solution2 {
 
         return tmp;
     }
-     public class ListNode {
+     private class ListNode {
           int val;
           ListNode next=null;
           ListNode() {}

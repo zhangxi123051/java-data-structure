@@ -59,7 +59,38 @@ public class Solution209{
     }
     //leetcode submit region begin(Prohibit modification and deletion)
     class Solution {
+        /*
+         滑动窗口
+         */
         public int minSubArrayLen(int target, int[] nums) {
+            int result=nums.length;
+            int i=0,j=0;
+            int total=0;
+            while(j < nums.length){
+                total=total+nums[j];
+                j++;
+                //移动i
+                while(total >=target){
+                    result = Math.min(result,j-i);
+                    total=total-nums[i];
+                    i++;
+                    if( j-i <=result && total>=target){
+                        System.out.println("i="+i+";j="+j);
+                    }
+                }
+            }
+            if(result >=nums.length){
+                return 0;
+            }else{
+                return result;
+            }
+        }
+
+
+        /*
+        2分查找
+         */
+        public int minSubArrayLen2(int target, int[] nums) {
             int result=nums.length;
             int i=0,j=0;
             int total=0;

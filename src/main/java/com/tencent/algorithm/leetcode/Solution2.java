@@ -43,25 +43,27 @@ package com.tencent.algorithm.leetcode;
 // 👍 5626 👎 0
 
 
+import com.tencent.algorithm.leetcode.util.ListNode;
+
 public class Solution2 {
 
     public static void main(String[] args) {
         Solution solution = new Solution2().new Solution();
-        ListNode l1 = new Solution2().new ListNode(2);
-        l1.next = new Solution2().new ListNode(4);
-        l1.next.next=new Solution2().new ListNode(3);
+        ListNode l1 = new ListNode(2);
+        l1.next = new ListNode(4);
+        l1.next.next=new ListNode(3);
 
 
-        ListNode l2 = new Solution2().new ListNode(5);
-        l2.next = new Solution2().new ListNode(6);
-        l2.next.next=new Solution2().new ListNode(4);
+        ListNode l2 = new ListNode(5);
+        l2.next = new ListNode(6);
+        l2.next.next=new ListNode(4);
 
 //        l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
-        l1= new Solution2().createList(new int[]{9,9,9,9,9,9,9});
-        l2= new Solution2().createList(new int[]{9,9,9,9});
+        l1= ListNode.createList(new int[]{9,9,9,9,9,9,9});
+        l2= ListNode.createList(new int[]{9,9,9,9});
 
-        l1= new Solution2().createList(new int[]{2,4,3});
-        l2= new Solution2().createList(new int[]{5,6,4});
+        l1= ListNode.createList(new int[]{2,4,3});
+        l2= ListNode.createList(new int[]{5,6,4});
 
 //        ListNode head1=l1;
 //        while (head1!=null){
@@ -84,27 +86,7 @@ public class Solution2 {
             result=result.next;
         }
     }
-    public ListNode createList(int[] nums){
-        if(nums==null || nums.length==0){
-            return null;
-        }
-        ListNode result= new ListNode(nums[0]);
-        ListNode tmp=result;
 
-        for(int i=1;i<nums.length;i++){
-            result.next=new ListNode(nums[i]);
-            result=result.next;
-        }
-
-        return tmp;
-    }
-     private class ListNode {
-          int val;
-          ListNode next=null;
-          ListNode() {}
-          ListNode(int val) { this.val = val; }
-          ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-      }
 
     class Solution {
         public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

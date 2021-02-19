@@ -42,6 +42,8 @@ package com.tencent.algorithm.leetcode;
 // Related Topics 递归 链表
 // 👍 810 👎 0
 
+import com.tencent.algorithm.leetcode.util.ListNode;
+
 public class Solution24{
     public static void main(String[] args) {
         Solution solution = new Solution24().new Solution();
@@ -70,13 +72,7 @@ public class Solution24{
         return tmp;
     }
 
-    public class ListNode {
-        int val;
-        ListNode next=null;
-        ListNode() {}
-        ListNode(int val) { this.val = val; }
-        ListNode(int val, ListNode next) { this.val = val; this.next = next; }
-    }
+
     class Solution {
         public ListNode swapPairs(ListNode head) {
             ListNode result =head;

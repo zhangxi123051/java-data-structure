@@ -1,18 +1,15 @@
-package com.tencent.algorithm.leetcode.top100;
+package com.tencent.algorithm.leetcode.tree;
 
 import com.tencent.algorithm.leetcode.util.TreeNode;
 
-import java.lang.management.BufferPoolMXBean;
 import java.util.Arrays;
 import java.util.LinkedList;
-import java.util.List;
-import java.util.TreeMap;
 
 public class S297 {
 
 
     public static void main(String[] args) {
-        S297.Solution solution = new S297().new Solution();
+        Solution solution = new S297().new Solution();
         TreeNode root= TreeNode.createTree();
 
 
@@ -66,7 +63,7 @@ public class S297 {
            Myserialize(root.left,sb);
            Myserialize(root.right,sb);
         }
-
+        
         // Decodes your encoded data to tree.
         public TreeNode deserialize(String data) {
             String[] sa = data.split(",");

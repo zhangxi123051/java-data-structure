@@ -105,6 +105,12 @@ public class TreeNode<E> {
         }
 
 
+
+        public static List preorderTraversal(TreeNode<Integer> root){
+            List<Integer> result= new ArrayList<>();
+            preorderTraversal(root,result);
+            return result;
+        }
         //前序遍历
         public static void preorderTraversal(TreeNode<Integer> root,List<Integer> result) {
             if(root ==null){
@@ -118,6 +124,13 @@ public class TreeNode<E> {
             return;
         }
 
+
+
+        public static List inorderTraversal(TreeNode<Integer> root){
+            List<Integer> result= new ArrayList<>();
+            inorderTraversal(root,result);
+            return result;
+        }
 
         //中序遍历
         public static void inorderTraversal(TreeNode<Integer> root,List<Integer> result) {

@@ -36,7 +36,14 @@ digits[i] 是范围 ['2', '9'] 的一个数字。
 
 public class S17 {
 
+    public static void main(String[] args) {
+        Solution solution = new S17().new Solution();
+        System.out.println(solution.letterCombinations("23"));
 
+
+
+
+    }
     class Solution {
         Map<Character, String> phoneMap= new HashMap<Character, String>() {{
             put('2', "abc");

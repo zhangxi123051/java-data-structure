@@ -55,15 +55,7 @@ public class S23 {
                 return l1;
             }
 
-            ListNode head=null;
-            //初始化第一个节点 链表头部
-            if(l1.val <= l2.val){
-                head=l1;
-                l1=l1.next;
-            }else{
-                head=l2;
-                l2=l2.next;
-            }
+            ListNode head=new ListNode(-1);
             ListNode tmp =head;
 
             while(l1 !=null || l2!=null){
@@ -88,7 +80,7 @@ public class S23 {
 
             }
 
-            return head;
+            return head.next;
         }
     }
 }

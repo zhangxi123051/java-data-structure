@@ -1,7 +1,7 @@
 package com.tencent.springioc.service;
 
 import com.tencent.springioc.annotation.Service;
-import org.omg.CORBA.PUBLIC_MEMBER;
+//import org.omg.CORBA.PUBLIC_MEMBER;
 
 @Service
 public class OrderServiceImpl{
